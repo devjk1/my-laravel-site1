@@ -1,23 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    <div class="container">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
 
-                    You are logged in!
-                </div>
+                @auth
+                    <h1 class="display-4">Hello {{ Auth::user()->name }}!</h1>
+                @else
+                    <h1 class="display-4">Hello Guest!</h1>
+                @endauth
+
+                <p class="lead">This is test1.</p>
+
             </div>
         </div>
+
     </div>
-</div>
 @endsection

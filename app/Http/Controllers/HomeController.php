@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use League\Csv\Reader;
+use App\Indian;
 
 class HomeController extends Controller
 {

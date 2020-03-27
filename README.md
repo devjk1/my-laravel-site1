@@ -1,3 +1,17 @@
+php artisan migrate --seed
+
+// App\Console\Commands\ExportCustomer.php
+// set path in handle()
+
+// Export Customers table to .csv
+php artisan command:ExportCustomer
+
+// App\Console\Commands\ImportCustomer.php
+// set path in handle()
+
+// Import .csv to ImportedCustomers table
+php artisan command:ImportCustomer
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
